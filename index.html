@@ -46,6 +46,12 @@
                 body.style.overflowY = '';
             }
         };
+        function customPager() {
+            pager = document.getElementsByClassName("bx-default-pager");
+            org_html = pager.item(0).innerHTML;
+            new_html = "<div class='container-pager'>" + org_html + "</div>";
+            document.getElementsByClassName("bx-default-pager").item(0).innerHTML = new_html;
+        }
         $(document).ready(function () {
             $(document).ready(function () {
                 $('.slider').bxSlider({
@@ -57,6 +63,10 @@
                         $('.slider .hero-image .container .hero-text .slide-overlay').eq(1).addClass('active-slide');
                         $('.slider .hero-image .container .hero-text .slide-mobile-overlay').eq(1).addClass('active-slide');
                         $(".slide-overlay.active-slide").addClass("wow animated fadeInRight");
+                        customPager();
+                    },
+                    onSliderResize: function() {
+                        customPager();
                     },
                     onSlideAfter: function (currentSlideNumber, totalSlideQty, currentSlideHtmlObject) {
                         $('.active-slide').removeClass('active-slide');

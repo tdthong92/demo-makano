@@ -313,6 +313,14 @@ html,
 .bx-wrapper .bx-pager {
     bottom: 30px !important;
 }
+.container-pager {
+    width: fit-content;
+    margin: auto;
+    background: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    padding: 2px 4px;
+    border-radius: 30px;
+}
 .btn-detail {
     font-weight: bold;
 }
