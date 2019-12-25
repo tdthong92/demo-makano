@@ -1,6 +1,9 @@
 footer {
     background-color: #E8F4F2;
     padding-top: calc(28% + 120px);
+    width: 100vw;
+    text-align: center;
+    margin-left: calc(-50vw + 680px);
 }
 footer .logo {
 }
@@ -53,6 +56,8 @@ footer .info .item a:hover {
     font-size: 10px;
     line-height: 30px;
     color: white;
+    width: 100vw;
+    margin-left: calc(-50vw + 680px);
 }
 footer .footer-logo, .social-icons {
     text-align: center;
