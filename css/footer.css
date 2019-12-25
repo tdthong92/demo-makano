@@ -51,6 +51,9 @@ footer .info .item a:hover {
     text-align: center;
     font-weight: normal;
     font-size: 10px;
-    line-height: 21px;
+    line-height: 30px;
     color: white;
+}
+footer .footer-logo, .social-icons {
+    text-align: center;
 }

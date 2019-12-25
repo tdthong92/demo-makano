@@ -28,7 +28,7 @@ html,
             }
             header .logo {
                 float: left;
-                margin: 20px 40px 20px -180px;
+                margin: 20px 40px 20px -100px;
             }
             .logo img {
                 width: 174px;
@@ -47,7 +47,8 @@ html,
                 color: var(--text-black);
                 text-align: left;
                 text-transform: uppercase;
-                padding: 37px 25px;
+                padding: 37px 0;
+                margin: 0 25px;
                 text-decoration: none;
                 font-size: 16px;
                 font-weight: bold;
@@ -55,10 +56,15 @@ html,
             }
 
             .topnav a:hover {
-                border-bottom: 3px solid red;
+                border-bottom: 3px solid var(--red);
+                color: var(--red);
                 text-decoration: none;
             }
-
+            .topnav a:focus {
+                color: var(--red);
+                border-bottom: 3px solid var(--red);
+                text-decoration: none;
+            }
             .topnav a.active {
                 border-bottom: 3px solid red;
             }
@@ -78,7 +84,7 @@ html,
             }
             .phone-call {
                 padding: 10px;
-                margin: 25px -180px 20px 40px;
+                margin: 25px -100px 20px 40px;
                 float: right;
                 color: white;
                 background: #E50000;
@@ -144,7 +150,7 @@ html,
             }
             .image-slider img{
                 float: right;
-                opacity: 0.8;
+                opacity: 0.9;
             }
             .hero-image .bottom-slide {
                 overflow: hidden;
@@ -153,7 +159,7 @@ html,
         .decor-1 {
             display: none;
         }
-        .decor-2{
+        .decor-2 {
             margin-top: -52px;
             height: 200px;
         }
@@ -171,7 +177,7 @@ html,
                 margin: 20px 40px;
             }
             .phone-call {
-                margin: 25px 40px;
+                margin: 25px -40px 0 0;
             }
             .menu {
                 max-width: 1360px;
@@ -235,17 +241,68 @@ html,
     .decor-1 {
         display: none!important;
     }
+    header .logo img {
+        width: 140px;
+    }
+    .top-left-panel {
+        width: calc(50vw);
+    }
+    .title-product {
+        font-size: 32px;
+    }
+    .main-container .product .description .info .title {
+        font-size: 14px;
+    }
+    .main-container .product .description .info .item .icon {
+        flex: 1;
+    }
+    .hero-text {
+        text-align: center;
+    }
+    .hero-text .title, .hero-text .description {
+        text-align: left;
+    }
+    .decor-2 {
+        display: none !important;
+    }
+    .image-slider img {
+        padding: 0 10px;
+    }
+    .hero-image {
+        background: none;
+    }
+    .hero-image .bottom-slide {
+        height: 70px;
+    }
 }
 .bx-prev {
     background: url("../assets/ic-left.svg") !important;
     background-size: contain !important;
-    top: 40% !important;
+    left: calc(50% - 150px) !important;
+    width: 40px !important;
+    height: 40px !important;
 }
 .bx-next {
     background: url("../assets/ic-right.svg") !important;
     background-size: contain !important;
-    top: 40% !important;
+    right: calc(50% - 150px) !important;
+    width: 40px !important;
+    height: 40px !important;
 }
+.bx-prev, .bx-next {
+    top: auto !important;
+    bottom: 25px;
+}
+.bx-pager-item {
+    margin: 10px !important;
+}
+.bx-pager-item a {
+    background: var(--gray) !important;
+}
+.bx-pager-item .active {
+    background: var(--red) !important;
+}
+
 .slide-overlay, .slide-mobile-overlay {
     opacity: 0;
 }
@@ -255,6 +312,9 @@ html,
 }
 .bx-wrapper .bx-pager {
     bottom: 30px !important;
+}
+.btn-detail {
+    font-weight: bold;
 }
 .btn-detail img {
     display: inline-block !important;
