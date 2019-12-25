@@ -220,6 +220,11 @@ html,
     right: 15px;
     display: block;
 }
+@media screen and (max-width: 1400px) {
+    .decor-1 {
+        display: none !important;
+    }
+}
 @media screen and (max-width: 992px) {
     .desktop {
         display: none;
@@ -268,6 +273,8 @@ html,
     }
     .image-slider img {
         padding: 0 10px;
+        float: none;
+        margin: auto;
     }
     .hero-image {
         background: none;
