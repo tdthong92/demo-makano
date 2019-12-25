@@ -3,9 +3,8 @@
 }
 .main-container .row .image {
     position: relative;
-    overflow: hidden;
 }
-.main-container .row .image img{
+.main-container .row .image img {
     float: right;
     width: 100%;
     max-width: 700px;
@@ -15,7 +14,7 @@
 }
 .main-container .product .description .info .title {
     font-weight: 600;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 30px;
     width: fit-content;
     /* identical to box height, or 150% */
@@ -55,6 +54,9 @@
     }
     .main-container .row:nth-child(even) > .image img {
         float: left;
+    }
+    .main-container .row .image img {
+        width: auto;
     }
     .main-container .row:nth-child(even) > .image .background1 {
         right: -210px;

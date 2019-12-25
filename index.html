@@ -26,7 +26,7 @@
             document.getElementById("menu-mobile-button").checked = false;
             let timer = setInterval(
                 function () {
-                    document.getElementById(id).scrollIntoView();
+                    document.getElementById(id).scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
                     clearInterval(timer);
                 }, 200
             );
