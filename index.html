@@ -1,0 +1,451 @@
+<!Doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Makano</title>
+    <link href="css/site.css" rel="stylesheet">
+    <link href="css/product.css" rel="stylesheet">
+    <link href="css/footer.css" rel="stylesheet">
+    <link href="css/mobile-menu.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/aos.css">
+    <script src="vendor/aos.js"></script>
+    <script src="vendor/jquery.min.js"></script>
+    <link rel="stylesheet" href="vendor/bxslider/jquery.bxslider.min.css">
+    <script src="vendor/bxslider/jquery.bxslider.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="vendor/bootstrap.min.js"></script>
+    <script>
+        function goto(id) {
+            const body = document.body;
+            body.style.position = '';
+            body.style.top = '';
+            body.style.height = '';
+            body.style.overflowY = '';
+            document.getElementById("menu-mobile-button").checked = false;
+            let timer = setInterval(
+                function () {
+                    document.getElementById(id).scrollIntoView();
+                    clearInterval(timer);
+                }, 200
+            );
+        }
+
+        function toggleMenu(e) {
+            if (e.checked) {
+                const body = document.body;
+                body.style.height = '100vh';
+                body.style.overflowY = 'hidden';
+            } else {
+                const body = document.body;
+                const scrollY = body.style.top;
+                body.style.position = '';
+                body.style.top = '';
+                body.style.height = '';
+                body.style.overflowY = '';
+            }
+        };
+        $(document).ready(function () {
+            $(document).ready(function () {
+                $('.slider').bxSlider({
+                    auto: true,
+                    autoHover: true,
+                    speed: 1000,
+                    controls: true,
+                    onSliderLoad: function () {
+                        $('.slider .hero-image .container .hero-text .slide-overlay').eq(1).addClass('active-slide');
+                        $('.slider .hero-image .container .hero-text .slide-mobile-overlay').eq(1).addClass('active-slide');
+                        $(".slide-overlay.active-slide").addClass("wow animated rubberBand");
+                    },
+                    onSlideAfter: function (currentSlideNumber, totalSlideQty, currentSlideHtmlObject) {
+                        $('.active-slide').removeClass('active-slide');
+                        $('.slider .hero-image .container .hero-text .slide-overlay').eq(currentSlideHtmlObject + 1).addClass('active-slide');
+                        $('.slider .hero-image .container .hero-text .slide-mobile-overlay').eq(currentSlideHtmlObject + 1).addClass('active-slide');
+                        $(".slide-overlay.active-slide").addClass("animated rubberBand");
+                        $(".slide-mobile-overlay.active-slide").addClass("animated rubberBand");
+
+                    },
+                    onSlideBefore: function () {
+                        $('.slider .hero-image .container .hero-text .slide-overlay').eq(1).addClass('active-slide');
+                        $(".slide-overlay.active-slide").removeClass("animated rubberBand");
+                        $(".slide-overlay.blue-overlay.active-slide").removeAttr('style');
+
+                        $('.slider .hero-image .container .hero-text .slide-mobile-overlay').eq(1).addClass('active-slide');
+                        $(".slide-mobile-overlay.active-slide").removeClass("animated rubberBand");
+                        $(".slide-mobile-overlay.blue-overlay.active-slide").removeAttr('style');
+                    }
+                });
+            });
+            AOS.init({
+                duration: 1200,
+            });
+            window.onscroll = function () {
+                myFunction()
+            };
+
+            var header = document.getElementById("header");
+            var mobileMenu = document.getElementById("mobile-menu");
+            var sticky = header.offsetTop;
+
+            function myFunction() {
+                if (window.pageYOffset > sticky) {
+                    header.classList.add("sticky");
+                    mobileMenu.classList.add("sticky");
+                } else {
+                    header.classList.remove("sticky");
+                    mobileMenu.classList.remove("sticky");
+                }
+            }
+        });
+    </script>
+</head>
+
+<body>
+<header id="header">
+    <div class="menu">
+        <div class="logo">
+            <img src="assets/logo.svg">
+        </div>
+        <div class="topnav desktop">
+            <a href="#mlm">Máy làm mát</a>
+            <a href="#mln">Máy lọc nước</a>
+            <a href="#bt">Bếp từ</a>
+        </div>
+
+        <div class="phone-call desktop">
+            <span>1900 63 60 98</span>
+        </div>
+        <div class="web-info desktop">
+            <a href="https://tapdoandaiviet.com.vn/he-thong.html">Tìm đại lý</a>
+        </div>
+    </div>
+</header>
+<div class="mobile-menu mobile" id="mobile-menu">
+    <div class="container">
+        <div id="menuToggle">
+            <input type="checkbox" id="menu-mobile-button" onclick="toggleMenu(this);"/>
+            <span></span>
+            <span></span>
+            <span></span>
+            <div id="background"></div>
+            <ul id="menu">
+                <li><a href="#" onclick="goto('mlm');">MÁY LÀM MÁT</a></li>
+                <li><a href="#" onclick="goto('mln');">MÁY LỌC NƯỚC</a></li>
+                <li><a href="#" onclick="goto('bt');">BẾP TỪ</a></li>
+                <li><a href="https://tapdoandaiviet.com.vn/he-thong.html">TÌM ĐẠI LÝ</a></li>
+                <li class="full-width"><a class="phone-call">1900 63 60 98</a></li>
+                <li>
+                    <div class="social">
+                        <a class="website-link website-fb-link" href="#">
+                            <img class="contact-icon" src="assets/ic-fb.svg">
+                        </a>
+                        <a class="website-link website-ytb-link" href="#">
+                            <img class="contact-icon" src="assets/ic-ytb.svg">
+                        </a>
+                        <a class="website-link website-tt-link" href="#">
+                            <img class="contact-icon" src="assets/ic-tt.svg">
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="top-left-panel">
+</div>
+<div class="slider" id="sliders">
+    <div class="hero-image">
+        <img class="decor-1" src="assets/decor%201.svg">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-6 hero-text desktop">
+                    <div class="slide-overlay">
+                        <div class="title">
+                            <p>Gia dụng xịn chất
+                                Nhớ nhất Makano</p>
+                        </div>
+                        <div class="description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.
+                        </div>
+                        <a href="https://daiviet.com">
+                            Tìm hiểu thêm&gt;
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6 image-slider">
+                    <img src="https://drive.google.com/uc?id=1HfodY0CUOZ44ZpzspUHhUthcFkv88x5V">
+                </div>
+                <div class="col-xs-12 col-md-6 hero-text mobile">
+                    <div class="slide-mobile-overlay">
+                        <div class="title">
+                            <p>Gia dụng xịn chất
+                                Nhớ nhất Makano</p>
+                        </div>
+                        <div class="description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.
+                        </div>
+                        <a href="https://daiviet.com">
+                            Tìm hiểu thêm&gt;
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-slide"><img class="decor-2" src="assets/decor%202.svg">
+        </div>
+    </div>
+    <div class="hero-image">
+        <img class="decor-1" src="assets/decor%201.svg">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-6 hero-text desktop">
+                    <div class="slide-overlay">
+                        <div class="title">
+                            <p>Gia dụng xịn chất
+                                Nhớ nhất Makano slide2</p>
+                        </div>
+                        <div class="description">
+                            Slide2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididun.
+                        </div>
+                        <a href="https://daiviet.com">
+                            Tìm hiểu thêm&gt;
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6 image-slider">
+                    <img src="https://drive.google.com/uc?id=1HfodY0CUOZ44ZpzspUHhUthcFkv88x5V">
+                </div>
+                <div class="col-xs-12 col-md-6 hero-text mobile">
+                    <div class="slide-mobile-overlay">
+                        <div class="title">
+                            <p>Gia dụng xịn chất
+                                Nhớ nhất Makano slide2</p>
+                        </div>
+                        <div class="description">
+                            Slide2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididun.
+                        </div>
+                        <a href="https://daiviet.com">
+                            Tìm hiểu thêm&gt;
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-slide"><img class="decor-2" src="assets/decor%202.svg">
+        </div>
+    </div>
+</div>
+<main class="web-contain">
+    <div class="main-container container">
+        <div id="products">
+
+            <div class="row product" id="bt">
+                <div class="col-xs-16 col-md-6 image">
+                    <img data-aos="fade-up" src="https://drive.google.com/uc?id=1w8nscA31O7air-nylKiklkUEohY8DIuJ"
+                         class="aos-init aos-animate">
+                </div>
+                <div data-aos="fade-up" class="col-xs-16 col-md-6 description aos-init aos-animate">
+                    <div class="title-product">
+                        Bếp Từ
+                    </div>
+                    <div class="info">
+                        <div class="title">
+                            Tính năng sản phẩm
+                        </div>
+                        <div class="item">
+                            <img src="https://drive.google.com/uc?id=1HPIHLIwfO1nimJQx9pUdqj8LDy7Wp0pM">
+                            Màn hình led hiển thị.
+                        </div>
+                        <div class="item">
+                            <img src="https://drive.google.com/uc?id=1H9-orrV9O9vJQalc8VulrET-Pmt1za-h">
+                            Điều khiển cảm ứng.
+                        </div>
+                        <div class="item">
+                            <img src="https://drive.google.com/uc?id=1FR9GhHvgypE_jTKkyu8xRbAqA05GNtLo">
+                            Chức năng hẹn giờ.
+                        </div>
+                        <div class="item">
+                            <img src="https://drive.google.com/uc?id=1BhOAKUBnxFtdvuUBPDyM1AagjSrqraZS">
+                            Khoá an toàn trẻ em.
+                        </div>
+                        <div class="item">
+                            <img src="https://drive.google.com/uc?id=1wwBpSqIJZkx33VbDUL8VHYSkTQcmWLDJ">
+                            Cảnh báo quá nhiệt.
+                        </div>
+                        <div class="item">
+                            <img src="https://drive.google.com/uc?id=1RpgqvW7Wu3G3YQjY3zJmgoKyBaaMTanS">
+                            Bàn phím điều khiển dạng trượt.
+                        </div>
+                        <div class="item">
+                            <a href="https://daiviet.com">
+                                XEM CHI TIẾT&gt;
+                            </a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row product" id="mln">
+                <div class="col-xs-16 col-md-6 image">
+                    <img data-aos="fade-up" src="https://drive.google.com/uc?id=1b52hZ4vLJcfsvjPGMOmNJZu9IqpROXEc"
+                         class="aos-init aos-animate">
+                </div>
+                <div data-aos="fade-up" class="col-xs-16 col-md-6 description aos-init aos-animate">
+                    <div class="title-product">
+                        Máy lọc nước RO
+                    </div>
+                    <div class="info">
+                        <div class="title">
+                            Tính năng sản phẩm
+                        </div>
+                        <div class="item">
+                            <img src="https://drive.google.com/uc?id=1hreHOynHNGwYXPsG8SBMzLq9bOVJhKnS">
+                            Lõi lọc thô: PP 10’’, CTO 10’’, Ceramic 10’’, Cation 10”.
+                        </div>
+                        <div class="item">
+                            <img src="https://drive.google.com/uc?id=1mZX4sXc_9EORxUr1ZMDLDajEtgYql9IA">
+                            Lọc tinh: Màng lọc RO DOW Aqualast.
+                        </div>
+                        <div class="item">
+                            <img src="https://drive.google.com/uc?id=18ICcYEx04nNrsEB2dRrcZ2koaw8QfM4W">
+                            Lõi lọc nâng cao: T33, Alkaline, Hồng ngoại, Nano bạc, khoáng đá Maifan.
+                        </div>
+                        <div class="item">
+                            <img src="https://drive.google.com/uc?id=1IzAoDYsuSrNfEt-K_U5ua7FSoGio-xr2">
+                            Tự động sục rửa màng RO
+                        </div>
+                        <div class="item">
+                            <img src="https://drive.google.com/uc?id=1SN0H1kuj0hf6WQ9p3hvu6ZnnDJJfg39S">
+                            Nước nóng.
+                        </div>
+                        <div class="item">
+                            <img src="https://drive.google.com/uc?id=11wKDCpD9Rrg5NYmZWOrWjSVwSXtiR6h0">
+                            Nước lạnh.
+                        </div>
+                        <div class="item">
+                            <a href="https://daiviet.com">
+                                XEM CHI TIẾT&gt;
+                            </a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row product" id="mlm">
+                <div class="col-xs-16 col-md-6 image">
+                    <img data-aos="fade-up" src="https://drive.google.com/uc?id=1ndHdIsfHZlGJJw__G4h3euxWE4RfC0mA"
+                         class="aos-init">
+                </div>
+                <div data-aos="fade-up" class="col-xs-16 col-md-6 description aos-init">
+                    <div class="title-product">
+                        Máy Làm Mát
+                    </div>
+                    <div class="info">
+                        <div class="title">
+                            Tính năng sản phẩm
+                        </div>
+                        <div class="item">
+                            <img src="https://drive.google.com/uc?id=1ADw5njjdfGqD0RQu1zk_ybrtzOM8ufYg">
+                            Motor sử dụng lõi đồng nguyên chất siêu bền.
+                        </div>
+                        <div class="item">
+                            <img src="https://drive.google.com/uc?id=11wKDCpD9Rrg5NYmZWOrWjSVwSXtiR6h0">
+                            Làm mát nhanh.
+                        </div>
+                        <div class="item">
+                            <img src="https://drive.google.com/uc?id=1CFrXWMDhjVxOVQ_ykVivQwFVUfN79ln7">
+                            Tiết kiệm năng lượng hiệu quả cao.
+                        </div>
+                        <div class="item">
+                            <img src="https://drive.google.com/uc?id=17Y4njqVaZ8HmsWmDE8Nay1CZELCDlK4A">
+                            Thích hợp sử dụng trong nhiều không gian.
+                        </div>
+                        <div class="item">
+                            <img src="https://drive.google.com/uc?id=13ZxTxmqEOimZuL6XBGh-Sh90kjMT9dgv">
+                            Dễ dàng bảo dưỡng.
+                        </div>
+                        <div class="item">
+                            <a href="https://daiviet.com">
+                                XEM CHI TIẾT&gt;
+                            </a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row video">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="embed-responsive embed-responsive-16by9" id="video-frame">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/wC-kx_lyFgM" allowfullscreen=""></iframe>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <img class="logo" src="assets/logo%20daiviet.svg"><br/>
+                <a class="website-link website-fb-link" href="#">
+                    <img class="contact-icon" src="assets/ic-fb.svg">
+                </a>
+                <a class="website-link website-ytb-link" href="#">
+                    <img class="contact-icon" src="assets/ic-ytb.svg">
+                </a>
+                <a class="website-link website-tt-link" href="#">
+                    <img class="contact-icon" src="assets/ic-tt.svg">
+                </a>
+            </div>
+            <div class="col-md-6">
+                <div class="info">
+                    <div class="title">
+                        Thông tin liên hệ
+                    </div>
+                    <div class="item">
+                        <img src="assets/ic-building.svg">
+                        <span id="website-address">
+                            Lô IV.11, Đường số 4, Khu Công Nghiệp Tân Bình, Phường Tây Thạnh, Quận Tân Phú, TP. HCM, Việt
+                            Nam
+                        </span>
+                    </div>
+                    <div class="item">
+                        <img src="assets/ic-phone.svg">
+                        <span id="website-phone">
+                            1900 63 60 98
+                        </span>
+                    </div>
+                    <div class="item">
+                        <img src="assets/ic-mail.svg">
+                        <span id="website-email">
+                            info@tapdoandaiviet.com.vn
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="info">
+                    <div class="title">
+                        Hỗ trợ
+                    </div>
+                    <div class="item">
+                        <a href="https://tapdoandaiviet.com.vn/he-thong.html">
+                            <img src="assets/ic-location.svg">
+                            Hệ THỐNG ĐẠI LÝ
+                        </a>
+
+                    </div>
+                    <div class="item">
+                        <a href="https://tapdoandaiviet.com.vn/file/CHINH_SACH_BAO_HANH_SAN_PHAM_2020.pdf">
+                            <img src="assets/ic-guarantee.svg">
+                            CHÍNH SÁCH BẢO HÀNH
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+
+</html>

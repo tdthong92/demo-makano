@@ -1,0 +1,71 @@
+.main-container .product {
+    margin-top: 60px;
+}
+.main-container .row .image {
+    position: relative;
+    overflow: hidden;
+}
+.main-container .row .image img{
+    float: right;
+    width: 100%;
+    max-width: 700px;
+}
+.main-container .product .description {
+    margin-top: 60px;
+}
+.main-container .product .description .info .title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    width: fit-content;
+    /* identical to box height, or 150% */
+
+    text-transform: uppercase;
+    padding-left: 5px;
+    border-left: 3px solid #2C9E85;
+    margin: 30px 0 20px;
+}
+.main-container .product .description .info .item:last-child {
+    margin-top: 30px;
+}
+.main-container .product .description .info .item img {
+    width: 30px;
+    height: 30px;
+}
+.main-container .product .description .info a {
+    padding: 10px;
+    margin-top: 30px;
+    color: white;
+    background: #E50000;
+    border-radius: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.main-container .product .description .info a:hover {
+    color: white;
+    text-decoration: none;
+}
+.main-container .embed-responsive {
+    margin-top: 140px;
+    margin-bottom: -28%;
+}
+@media screen and (min-width: 768px){
+    .main-container .row:nth-child(even) > .image {
+        left: 50%;
+    }
+    .main-container .row:nth-child(even) > .image img {
+        float: left;
+    }
+    .main-container .row:nth-child(even) > .image .background1 {
+        right: -210px;
+        left: auto;
+        top: 5px;
+    }
+    .main-container .row:nth-child(even) > .image .background2 {
+        right: auto;
+        left: 120px;
+    }
+    .main-container .row:nth-child(even) > .description {
+        right: 50%;
+    }
+}
