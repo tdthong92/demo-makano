@@ -104,6 +104,11 @@ html,
                 /*    width: 1360px !important;*/
                 /*}*/
             }
+            .hero-image {
+                background-image: url("../assets/logo2.svg");
+                background-repeat: no-repeat;
+                background-position: center;
+            }
             .hero-text {
                 margin-top: 160px;
                 padding: 20px;
@@ -116,13 +121,13 @@ html,
             }
             .hero-text .description {
                 font-weight: 500;
-                font-size: 20px;
+                font-size: 16px;
                 line-height: 30px;
                 margin-bottom: 20px;
                 padding: 0 20px;
             }
             .hero-text a {
-                padding: 10px;
+                padding: 12px 18px;
                 margin: 20px;
                 color: white;
                 background: #E50000;
@@ -139,6 +144,7 @@ html,
             }
             .image-slider img{
                 float: right;
+                opacity: 0.8;
             }
             .hero-image .bottom-slide {
                 overflow: hidden;
@@ -223,12 +229,17 @@ html,
     background-size: contain !important;
 }
 .slide-overlay, .slide-mobile-overlay {
-    visibility: hidden;
+    opacity: 0;
 }
 
 .slide-overlay.active-slide, .slide-mobile-overlay.active-slide {
-    visibility: visible;
+    opacity: 1;
 }
 .bx-wrapper .bx-pager {
     bottom: 30px !important;
+}
+.btn-detail img {
+    display: inline-block !important;
+    margin: 0 0 1px 1px;
+    width: 8px !important;
 }

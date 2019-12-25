@@ -66,17 +66,17 @@ function loadSliders(server) {
                     controls: true,
                     onSliderLoad: function () {
                         $('.slider .hero-image .container .hero-text .slide-overlay').eq(1).addClass('active-slide');
-                        $(".slide-overlay.active-slide").addClass("wow animated rubberBand");
+                        $(".slide-overlay.active-slide").addClass("wow animated fadeInRight");
                     },
                     onSlideAfter: function (currentSlideNumber, totalSlideQty, currentSlideHtmlObject) {
                         $('.active-slide').removeClass('active-slide');
                         $('.slider .hero-image .container .hero-text .slide-overlay').eq(currentSlideHtmlObject + 1).addClass('active-slide');
-                        $(".slide-overlay.active-slide").addClass("animated rubberBand");
+                        $(".slide-overlay.active-slide").addClass("animated fadeInRight");
 
                     },
                     onSlideBefore: function () {
                         $('.slider .hero-image .container .hero-text .slide-overlay').eq(1).addClass('active-slide');
-                        $(".slide-overlay.active-slide").removeClass("animated rubberBand");
+                        $(".slide-overlay.active-slide").removeClass("animated fadeInRight");
                         $(".slide-overlay.blue-overlay.active-slide").removeAttr('style');
                     }
                 });

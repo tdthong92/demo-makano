@@ -56,23 +56,23 @@
                     onSliderLoad: function () {
                         $('.slider .hero-image .container .hero-text .slide-overlay').eq(1).addClass('active-slide');
                         $('.slider .hero-image .container .hero-text .slide-mobile-overlay').eq(1).addClass('active-slide');
-                        $(".slide-overlay.active-slide").addClass("wow animated rubberBand");
+                        $(".slide-overlay.active-slide").addClass("wow animated fadeInRight");
                     },
                     onSlideAfter: function (currentSlideNumber, totalSlideQty, currentSlideHtmlObject) {
                         $('.active-slide').removeClass('active-slide');
                         $('.slider .hero-image .container .hero-text .slide-overlay').eq(currentSlideHtmlObject + 1).addClass('active-slide');
                         $('.slider .hero-image .container .hero-text .slide-mobile-overlay').eq(currentSlideHtmlObject + 1).addClass('active-slide');
-                        $(".slide-overlay.active-slide").addClass("animated rubberBand");
-                        $(".slide-mobile-overlay.active-slide").addClass("animated rubberBand");
+                        $(".slide-overlay.active-slide").addClass("animated fadeInRight");
+                        $(".slide-mobile-overlay.active-slide").addClass("animated fadeInRight");
 
                     },
                     onSlideBefore: function () {
                         $('.slider .hero-image .container .hero-text .slide-overlay').eq(1).addClass('active-slide');
-                        $(".slide-overlay.active-slide").removeClass("animated rubberBand");
+                        $(".slide-overlay.active-slide").removeClass("animated fadeInRight");
                         $(".slide-overlay.blue-overlay.active-slide").removeAttr('style');
 
                         $('.slider .hero-image .container .hero-text .slide-mobile-overlay').eq(1).addClass('active-slide');
-                        $(".slide-mobile-overlay.active-slide").removeClass("animated rubberBand");
+                        $(".slide-mobile-overlay.active-slide").removeClass("animated fadeInRight");
                         $(".slide-mobile-overlay.blue-overlay.active-slide").removeAttr('style');
                     }
                 });
@@ -168,8 +168,8 @@
                         <div class="description">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.
                         </div>
-                        <a href="https://daiviet.com">
-                            Tìm hiểu thêm&gt;
+                        <a href="https://daiviet.com" class="btn-detail">
+                            <span>Tìm hiểu thêm <img src="assets/ic-next2.svg"></span>
                         </a>
                     </div>
                 </div>
@@ -185,8 +185,8 @@
                         <div class="description">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.
                         </div>
-                        <a href="https://daiviet.com">
-                            Tìm hiểu thêm&gt;
+                        <a href="https://daiviet.com" class="btn-detail">
+                            <span>Tìm hiểu thêm <img src="assets/ic-next2.svg"></span>
                         </a>
                     </div>
                 </div>
@@ -280,9 +280,10 @@
                             Bàn phím điều khiển dạng trượt.
                         </div>
                         <div class="item">
-                            <a href="https://daiviet.com">
-                                XEM CHI TIẾT&gt;
-                            </a></div>
+                            <a href="https://daiviet.com" class="btn-detail">
+                                XEM CHI TIẾT<img src="assets/ic-next2.svg">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -324,9 +325,10 @@
                             Nước lạnh.
                         </div>
                         <div class="item">
-                            <a href="https://daiviet.com">
-                                XEM CHI TIẾT&gt;
-                            </a></div>
+                            <a href="https://daiviet.com" class="btn-detail">
+                                XEM CHI TIẾT<img src="assets/ic-next2.svg">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -364,9 +366,10 @@
                             Dễ dàng bảo dưỡng.
                         </div>
                         <div class="item">
-                            <a href="https://daiviet.com">
-                                XEM CHI TIẾT&gt;
-                            </a></div>
+                            <a href="https://daiviet.com" class="btn-detail">
+                                XEM CHI TIẾT<img src="assets/ic-next2.svg">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
