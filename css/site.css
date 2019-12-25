@@ -232,6 +232,9 @@ html,
     .hero-text a {
         text-align: center;
     }
+    .decor-1 {
+        display: none!important;
+    }
 }
 .bx-prev {
     background: url("../assets/ic-left.svg") !important;
