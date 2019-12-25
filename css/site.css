@@ -151,9 +151,7 @@ html,
                 height: 150px;
             }
         .decor-1 {
-            position: absolute;
-            left: 1300px;
-            top: -84px;
+            display: none;
         }
         .decor-2{
             margin-top: -52px;
@@ -161,8 +159,10 @@ html,
         }
         @media screen and (min-width: 1400px) {
             .decor-1 {
+                position: absolute;
                 right: 0;
                 left: auto;
+                top: -84px;
             }
 
         }
