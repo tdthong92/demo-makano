@@ -1,5 +1,4 @@
 footer {
-    min-height: 720px;
     background-color: #E8F4F2;
     padding-top: calc(28% + 120px);
 }
@@ -46,4 +45,12 @@ footer .info .item a:hover {
     footer .container {
         width: 1360px;
     }
+}
+.copy-right {
+    background: var(--black);
+    text-align: center;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 21px;
+    color: white;
 }

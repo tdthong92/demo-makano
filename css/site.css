@@ -200,6 +200,19 @@ html,
     background-color: white;
     z-index: 999999999;
 }
+.scroll-to-top {
+    display: none;
+    background: var(--black);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 60;
+}
+.fix-end {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    display: block;
+}
 @media screen and (max-width: 992px) {
     .desktop {
         display: none;

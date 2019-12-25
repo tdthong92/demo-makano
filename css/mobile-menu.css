@@ -102,6 +102,7 @@
 .mobile-menu #background {
     position: absolute;
     opacity: 0;
+    visibility: hidden;
     top: -60px;
     left: -100vw;
     width: calc(100vw + 60px);
@@ -126,6 +127,7 @@
 }
 #menuToggle input:checked ~ #background {
     opacity: 1;
+    visibility: visible;
 }
 
 .mobile-menu #menu .full-width {

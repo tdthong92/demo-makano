@@ -86,15 +86,18 @@
 
             var header = document.getElementById("header");
             var mobileMenu = document.getElementById("mobile-menu");
+            var scrolllTop = document.getElementById("scroll-to-top");
             var sticky = header.offsetTop;
 
             function myFunction() {
                 if (window.pageYOffset > sticky) {
                     header.classList.add("sticky");
                     mobileMenu.classList.add("sticky");
+                    scrolllTop.classList.add("fix-end");
                 } else {
                     header.classList.remove("sticky");
                     mobileMenu.classList.remove("sticky");
+                    scrolllTop.classList.remove("fix-end");
                 }
             }
         });
@@ -449,6 +452,12 @@
         </div>
     </div>
 </footer>
+<div class="scroll-to-top" id="scroll-to-top" onclick="goto('sliders')">
+    <img src="assets/ic-top.svg">
+</div>
+<div class="copy-right">
+    <p>© 2019 Công ty Cổ Phần Cơ Điện Lạnh Đại Việt</p>
+</div>
 </body>
 
 </html>
