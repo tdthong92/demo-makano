@@ -1,10 +1,12 @@
-footer {
+footer, .footer-content {
     background-color: #E8F4F2;
+}
+.footer-content {
     padding-top: calc(28% + 120px);
 }
-footer .logo {
+.footer-content .logo {
 }
-footer .container {
+.footer-content .container {
     max-width: 1360px;
 }
 .website-link {
@@ -17,40 +19,33 @@ footer .container {
 .website-link:last-child {
     margin-right: 0;
 }
-footer .info .title {
+.footer-content .info .title {
     font-weight: bold;
     font-size: 20px;
     line-height: 21px;
     margin: 30px 0;
     color: var(--text-black);
 }
-footer .info .item {
+.footer-content .info .item {
     font-weight: normal;
     font-size: 16px;
     line-height: 21px;
     color: var(--text-light);
     margin-bottom: 13px;
 }
-footer .info .item a {
+.footer-content .info .item a {
     color: var(--text-light);
     text-decoration: none;
 }
-footer .info .item a:hover {
+.footer-content .info .item a:hover {
     text-decoration: none;
 }
 @media (min-width: 1360px) {
-    footer {
+    .footer-content {
         padding-top: 360px;
-        width: 100vw;
-        text-align: center;
-        margin-left: calc(-50vw + 680px);
     }
-    footer .container {
+    .footer-content .container {
         width: 1360px;
-    }
-    .copy-right {
-        width: 100vw;
-        margin-left: calc(-50vw + 680px);
     }
 }
 .copy-right {
@@ -61,6 +56,6 @@ footer .info .item a:hover {
     line-height: 30px;
     color: white;
 }
-footer .footer-logo, .social-icons {
+.footer-content .footer-logo, .social-icons {
     text-align: center;
 }
