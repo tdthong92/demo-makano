@@ -46,12 +46,14 @@
                 body.style.overflowY = '';
             }
         };
+
         function customPager() {
             pager = document.getElementsByClassName("bx-default-pager");
             org_html = pager.item(0).innerHTML;
             new_html = "<div class='container-pager'>" + org_html + "</div>";
             document.getElementsByClassName("bx-default-pager").item(0).innerHTML = new_html;
         }
+
         $(document).ready(function () {
             $(document).ready(function () {
                 $('.slider').bxSlider({
@@ -65,7 +67,7 @@
                         $(".slide-overlay.active-slide").addClass("wow animated fadeInRight");
                         customPager();
                     },
-                    onSliderResize: function() {
+                    onSliderResize: function () {
                         customPager();
                     },
                     onSlideAfter: function (currentSlideNumber, totalSlideQty, currentSlideHtmlObject) {
@@ -255,11 +257,11 @@
     <div class="main-container container">
         <div id="products">
             <div class="row product" id="mlm">
-                <div class="col-xs-16 col-md-6 image">
+                <div class="col-xs-12 col-md-6 image">
                     <img data-aos="fade-up" src="https://drive.google.com/uc?id=1ndHdIsfHZlGJJw__G4h3euxWE4RfC0mA"
                          class="aos-init aos-animate">
                 </div>
-                <div data-aos="fade-up" class="col-xs-16 col-md-6 description aos-init aos-animate">
+                <div data-aos="fade-up" class="col-xs-12 col-md-6 description aos-init aos-animate">
                     <div class="title-product">
                         Máy Làm Mát
                     </div>
@@ -305,11 +307,11 @@
                 </div>
             </div>
             <div class="row product" id="mln">
-                <div class="col-xs-16 col-md-6 image">
+                <div class="col-xs-12 col-md-6 image">
                     <img data-aos="fade-up" src="https://drive.google.com/uc?id=1b52hZ4vLJcfsvjPGMOmNJZu9IqpROXEc"
                          class="aos-init">
                 </div>
-                <div data-aos="fade-up" class="col-xs-16 col-md-6 description aos-init">
+                <div data-aos="fade-up" class="col-xs-12 col-md-6 description aos-init">
                     <div class="title-product">
                         Máy lọc nước RO
                     </div>
@@ -362,11 +364,11 @@
                 </div>
             </div>
             <div class="row product" id="bt">
-                <div class="col-xs-16 col-md-6 image">
+                <div class="col-xs-12 col-md-6 image">
                     <img data-aos="fade-up" src="https://drive.google.com/uc?id=1w8nscA31O7air-nylKiklkUEohY8DIuJ"
                          class="aos-init">
                 </div>
-                <div data-aos="fade-up" class="col-xs-16 col-md-6 description aos-init">
+                <div data-aos="fade-up" class="col-xs-12 col-md-6 description aos-init">
                     <div class="title-product">
                         THIẾT BỊ NHÀ BẾP
                     </div>
@@ -430,81 +432,81 @@
             <div class="col-md-2"></div>
         </div>
     </div>
-</main>
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="footer-logo">
-                    <img class="logo" src="assets/logo%20daiviet.svg">
-                </div>
-                <div class="social-icons">
-                    <a class="website-link website-fb-link" href="https://www.facebook.com/makanogiadungxinchat/">
-                        <img class="contact-icon" src="assets/ic-fb.svg">
-                    </a>
-                    <a class="website-link website-ytb-link" href="https://www.youtube.com/user/tapdoandaiviet">
-                        <img class="contact-icon" src="assets/ic-ytb.svg">
-                    </a>
-                    <a class="website-link website-tt-link" href="https://twitter.com/tapdoandaiviet?lang=en">
-                        <img class="contact-icon" src="assets/ic-tt.svg">
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="info">
-                    <div class="title">
-                        Thông tin liên hệ
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="footer-logo">
+                        <img class="logo" src="assets/logo%20daiviet.svg">
                     </div>
-                    <div class="item">
-                        <img src="assets/ic-building.svg">
-                        <span id="website-address">
+                    <div class="social-icons">
+                        <a class="website-link website-fb-link" href="https://www.facebook.com/makanogiadungxinchat/">
+                            <img class="contact-icon" src="assets/ic-fb.svg">
+                        </a>
+                        <a class="website-link website-ytb-link" href="https://www.youtube.com/user/tapdoandaiviet">
+                            <img class="contact-icon" src="assets/ic-ytb.svg">
+                        </a>
+                        <a class="website-link website-tt-link" href="https://twitter.com/tapdoandaiviet?lang=en">
+                            <img class="contact-icon" src="assets/ic-tt.svg">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="info">
+                        <div class="title">
+                            Thông tin liên hệ
+                        </div>
+                        <div class="item">
+                            <img src="assets/ic-building.svg">
+                            <span id="website-address">
                             Lô IV.11, Đường số 4, Khu Công Nghiệp Tân Bình, Phường Tây Thạnh, Quận Tân Phú, TP. HCM, Việt
                             Nam
                         </span>
-                    </div>
-                    <div class="item">
-                        <img src="assets/ic-phone.svg">
-                        <span id="website-phone">
+                        </div>
+                        <div class="item">
+                            <img src="assets/ic-phone.svg">
+                            <span id="website-phone">
                             1900 63 60 98
                         </span>
-                    </div>
-                    <div class="item">
-                        <img src="assets/ic-mail.svg">
-                        <span id="website-email">
+                        </div>
+                        <div class="item">
+                            <img src="assets/ic-mail.svg">
+                            <span id="website-email">
                             info@tapdoandaiviet.com.vn
                         </span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3">
-                <div class="info">
-                    <div class="title">
-                        Hỗ trợ
-                    </div>
-                    <div class="item">
-                        <a href="https://tapdoandaiviet.com.vn/he-thong.html">
-                            <img src="assets/ic-location.svg">
-                            Hệ THỐNG ĐẠI LÝ
-                        </a>
+                <div class="col-md-3">
+                    <div class="info">
+                        <div class="title">
+                            Hỗ trợ
+                        </div>
+                        <div class="item">
+                            <a href="https://tapdoandaiviet.com.vn/he-thong.html">
+                                <img src="assets/ic-location.svg">
+                                Hệ THỐNG ĐẠI LÝ
+                            </a>
 
-                    </div>
-                    <div class="item">
-                        <a href="https://tapdoandaiviet.com.vn/file/CHINH_SACH_BAO_HANH_SAN_PHAM_2020.pdf">
-                            <img src="assets/ic-guarantee.svg">
-                            CHÍNH SÁCH BẢO HÀNH
-                        </a>
+                        </div>
+                        <div class="item">
+                            <a href="https://tapdoandaiviet.com.vn/file/CHINH_SACH_BAO_HANH_SAN_PHAM_2020.pdf">
+                                <img src="assets/ic-guarantee.svg">
+                                CHÍNH SÁCH BẢO HÀNH
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </footer>
+    <div class="scroll-to-top" id="scroll-to-top" onclick="goto('top')">
+        <img src="assets/ic-top.svg">
     </div>
-</footer>
-<div class="scroll-to-top" id="scroll-to-top" onclick="goto('top')">
-    <img src="assets/ic-top.svg">
-</div>
-<div class="copy-right">
-    © 2019 Công ty Cổ Phần Cơ Điện Lạnh Đại Việt
-</div>
+    <div class="copy-right">
+        © 2019 Công ty Cổ Phần Cơ Điện Lạnh Đại Việt
+    </div>
+</main>
 </body>
 
 </html>
