@@ -258,3 +258,6 @@ html,
     margin: 0 0 1px 1px;
     width: 8px !important;
 }
+.bx-wrapper .bx-controls-direction a {
+    z-index: 49 !important;
+}
