@@ -229,3 +229,6 @@ html,
 .slide-overlay.active-slide, .slide-mobile-overlay.active-slide {
     visibility: visible;
 }
+.bx-wrapper .bx-pager {
+    bottom: 30px !important;
+}
