@@ -14,7 +14,7 @@
 }
 .main-container .product .description .info .title {
     font-weight: 600;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 30px;
     width: fit-content;
     /* identical to box height, or 150% */
@@ -45,6 +45,7 @@
 .main-container .product .description .info .item .text {
     margin-top: 5px;
     flex: 10;
+    font-size: 16px;
 }
 .main-container .product .description .info a {
     padding: 12px 18px;
