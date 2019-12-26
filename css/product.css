@@ -27,6 +27,9 @@
 .main-container .product .description .info .item:last-child {
     margin-top: 30px;
 }
+.main-container .product .description .info .item .btn-detail {
+    margin: 0 auto;
+}
 .main-container .product .description .info .item .icon img {
     width: 30px;
     height: 30px;
@@ -74,6 +77,9 @@
     .main-container .row .image img {
         width: auto;
         margin: 0 60px;
+    }
+    .main-container .product .description .info .item .btn-detail{
+        margin: 0;
     }
     .main-container .row:nth-child(even) > .image .background1 {
         right: -210px;

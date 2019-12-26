@@ -52,6 +52,15 @@ footer, .footer-content {
     .footer-content {
         padding-top: 120px;
     }
+    .main-container .embed-responsive {
+        margin-top: 60px;
+    }
+}
+@media screen and (max-width: 992px) {
+
+    .footer-content {
+        padding-top: 60px;
+    }
 }
 .copy-right {
     background: var(--black);
