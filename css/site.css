@@ -109,6 +109,14 @@ html,
                 .web-contain {
                     overflow-x: hidden;
                 }
+                .main-container .embed-responsive {
+                    margin-bottom: 0 !important;
+                }
+                .video {
+                    background-image: linear-gradient(to bottom, white calc(50% + 70px), #E8F4F2 calc(50% - 70px));
+                    width: 100vw;
+                    margin-left: calc(50% - 50vw);
+                }
             }
             .hero-image {
                 background-image: url("../assets/logo2.svg");

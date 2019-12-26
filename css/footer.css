@@ -48,6 +48,11 @@ footer, .footer-content {
         width: 1360px;
     }
 }
+@media screen and (max-width: 1360px) {
+    .footer-content {
+        padding-top: 120px;
+    }
+}
 .copy-right {
     background: var(--black);
     text-align: center;
@@ -58,4 +63,7 @@ footer, .footer-content {
 }
 .footer-content .footer-logo, .social-icons {
     text-align: center;
+}
+.social-icons {
+    margin-bottom: 60px;
 }
